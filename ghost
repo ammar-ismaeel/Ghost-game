@@ -1,0 +1,24 @@
+#ghost
+
+from random import randint
+
+print(3 * "\t" , "ghost game")
+brave = True
+score = 0
+while brave:
+    ghost_door = randint(1 , 3)
+    print(3 * "\t","three doors ahead  ghost is behind one of them")
+    print(3 * "\t", "chose which door to open")
+    door = input("chose one door frome 1 to 3 \n")
+    door_num = int(door)
+    if door_num == ghost_door :
+        print(3* "\t" , "ghoooost")
+        print("run away ghost behind you")
+        print("game over", score)
+        brave = False
+    else :
+        print("no ghost")
+        print("you enter the next door")
+        score=score + 1
+
+
